@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        brand: '#8c44f7',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

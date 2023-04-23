@@ -1,5 +1,6 @@
 import './globals.css'
 import Providers from './src/components/Providers'
+import Footer from './src/components/layout/Footer'
 import Navbar from './src/components/layout/Navbar'
 
 export const metadata = {
@@ -10,11 +11,11 @@ export const metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className="bg-white text-slate-900  antialiased">
-      <body className="min-h-screen bg-slate-50 antialiased dark:bg-slate-900">
+      <body className="flex min-h-screen flex-col bg-slate-50 antialiased dark:bg-slate-900">
         <Providers>
-          {/* ts-expect-error Server Component */}
           <Navbar />
-          {children}
+          <main className="flex-1 pt-20">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

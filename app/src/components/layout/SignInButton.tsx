@@ -1,20 +1,27 @@
 'use client'
 
+import Link from 'next/link'
 import {useState} from 'react'
-import {Button} from '../ui/Button'
+import {Button, buttonVariants} from '../ui/Button'
 
-const SignInButton = () => {
+const SignInButton = ({btnSize}) => {
   const [isLoading, setIsLoading] = useState(false)
 
   const authenticateUser = () => {
     setIsLoading(true)
-    console.log('authenticated')
+    console.log('Authenticated MFers...')
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 1000)
   }
 
   return (
-    <Button onClick={authenticateUser} isLoading={isLoading}>
+    <Link
+      className={buttonVariants({size: btnSize ? btnSize : ''})}
+      href="/login"
+    >
       Sign In
-    </Button>
+    </Link>
   )
 }
 
