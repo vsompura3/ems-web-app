@@ -5,9 +5,5 @@ import Link from 'next/link'
 const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
-  return (
-    <main>
-      <h1>EMS</h1>
-    </main>
-  )
+  return <h1>EMS</h1>
 }

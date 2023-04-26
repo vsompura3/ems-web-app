@@ -1,7 +1,7 @@
 import './globals.css'
-import Providers from './src/components/Providers'
 import Footer from './src/components/layout/Footer'
-import Navbar from './src/components/layout/Navbar'
+import Header from './src/components/layout/Header'
+import {EMSContextProvider} from './src/context/EMSContext'
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,13 +10,11 @@ export const metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className="bg-white text-slate-900  antialiased">
-      <body className="flex min-h-screen flex-col bg-slate-50 antialiased dark:bg-slate-900">
-        <Providers>
-          <Navbar />
-          <main className="flex-1 pt-20">{children}</main>
-          <Footer />
-        </Providers>
+    <html lang="en" className="bg-gray-100 text-slate-900  antialiased">
+      <body className="flex min-h-screen flex-col bg-slate-50 antialiased">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   )
