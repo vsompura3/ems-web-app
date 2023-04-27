@@ -135,7 +135,9 @@ const initialState = {
   hostelDetails: {},
   hostelLeaveSlip: {},
 }
+
 const EMSContext = createContext({state: initialState, dispatch: () => null})
+
 export const EMSContextProvider = ({children}: {children: React.ReactNode}) => {
   const [state, dispatch] = useReducer(reducer, initialState)
   return (

@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex flex-col items-center gap-4 py-4 sm:justify-between md:flex-row">
           <Link href="/" className="flex items-center gap-4">
             <Image src={appLogo} alt="app logo" width={64} height={64} />
-            <span className="text-lg font-bold">
+            <span className="hidden text-lg font-bold sm:block">
               Enhanced Management System
             </span>
           </Link>
