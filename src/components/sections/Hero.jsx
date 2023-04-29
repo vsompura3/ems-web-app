@@ -14,7 +14,7 @@ export default function Hero() {
           EMS is here to save the day!
           <div className="flex">
             <NavLink
-              className="mx-6 my-6 rounded-md bg-slate-900 px-4 py-2.5 text-xl font-medium text-white hover:bg-slate-900/80"
+              className=" my-6 rounded-md bg-slate-900 px-4 py-2.5 text-xl font-medium text-white hover:bg-[#8B44F6]"
               to="/login"
             >
               Sign In
