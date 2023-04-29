@@ -6,7 +6,6 @@ const Dashboard = () => {
   const { state } = useContext(EMSContext)
   const { userData: user } = state
   const greeting = sayGreeting()
-  console.log(sayGreeting)
   return (
     <div>
       Dashboard

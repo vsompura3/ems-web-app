@@ -20,7 +20,7 @@ const Header = () => {
                 className="font-medium text-slate-900 hover:text-slate-900/90 hover:underline"
                 href="/"
               >
-                Docs
+                Home
               </a>
             </li>
             <li>
