@@ -1,9 +1,9 @@
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router'
-import { getUserData } from '../api/ems-endpoints'
+import { getUserData, getUserMarks } from '../api/ems-endpoints'
 import LoginPanel from '../components/shared/LoginPanel'
 import { EMSContext } from '../context/EMSContext'
-import { GET_USER_DATA } from '../context/action.types'
+import { GET_USER_DATA, GET_USER_MARKS } from '../context/action.types'
 
 const Auth = () => {
   const { dispatch } = useContext(EMSContext)
@@ -18,8 +18,10 @@ const Auth = () => {
     if (registrationNumber && password) {
       setIsLoading(true)
       setError(false)
-      const data = await getUserData(registrationNumber, password)
-      dispatch({ type: GET_USER_DATA, payload: data })
+      const data1 = await getUserData(registrationNumber, password)
+      const data2 = await getUserMarks(registrationNumber, password)
+      dispatch({ type: GET_USER_DATA, payload: data1 })
+      dispatch({ type: GET_USER_MARKS, payload: data2 })
       setIsLoading(false)
       navigate('/dashboard')
     } else {
