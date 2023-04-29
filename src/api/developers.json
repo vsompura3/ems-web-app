@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Vaibhav Sompura",
+    "email": "vsompura3@gmail.com",
+    "age": 23,
+    "role": "Frontend Developer",
+    "domain": "Full-Stack Development",
+    "avatar": "https://avatars.githubusercontent.com/u/56104587?v=4",
+    "linkedin_url": "https://www.linkedin.com/in/vaibhav-sompura/",
+    "github_url": "https://github.com/vsompura3"
+  },
+  {
+    "name": "Tanupam Saha",
+    "email": "vsompura3@gmail.com",
+    "age": 23,
+    "role": "Frontend Developer",
+    "domain": "Full-Stack Development",
+    "avatar": "https://avatars.githubusercontent.com/u/56104587?v=4",
+    "linkedin_url": "https://www.linkedin.com/in/vaibhav-sompura/",
+    "github_url": "https://github.com/decoder-17"
+  },
+  {
+    "name": "Neeraj Kumar",
+    "email": "vsompura3@gmail.com",
+    "age": 23,
+    "role": "Backend Developer",
+    "domain": "Full-Stack Development",
+    "avatar": "https://avatars.githubusercontent.com/u/56104587?v=4",
+    "linkedin_url": "https://www.linkedin.com/in/vaibhav-sompura/",
+    "github_url": "https://github.com/ryuk-me"
+  },
+  {
+    "name": "Shivam Jaiswal",
+    "email": "vsompura3@gmail.com",
+    "age": 21,
+    "role": "Documentation",
+    "domain": "Data Science",
+    "avatar": "https://avatars.githubusercontent.com/u/56104587?v=4",
+    "linkedin_url": "https://www.linkedin.com/in/vaibhav-sompura/",
+    "github_url": "https://github.com/shivam-jaiswal"
+  }
+]
