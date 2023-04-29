@@ -17,7 +17,7 @@ function App() {
     <EMSContext.Provider value={{ state, dispatch }}>
       <BrowserRouter>
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 flex flex-col">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

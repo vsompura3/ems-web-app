@@ -3,12 +3,12 @@ import hero from '../../assets/hero.jpg'
 
 export default function Hero() {
   return (
-    <div className="m-4 flex flex-row justify-around rounded-2xl bg-white p-4">
-      <div className="content">
-        <div className=" m-6 justify-center p-10 text-6xl text-brand">
+    <div className="m-4 px-8 flex flex-row justify-around rounded-2xl bg-white py-4 shadow">
+      <div className="content flex flex-col justify-center space-y-8">
+        <div className="justify-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand">
           Enhanced Management System
         </div>
-        <div className=" m-6 justify-center p-10 align-middle text-2xl">
+        <div className="justify-center align-middle text-lg md:text-xl">
           Tired of slow and inefficient management systems? <br />
           Well, look no further! <br />
           EMS is here to save the day!
