@@ -1,11 +1,11 @@
-import hero from "../../assets/hero.jpg";
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
+import hero from '../../assets/hero.jpg'
 
 export default function Hero() {
   return (
-    <div className="m-4 flex flex-row justify-around rounded-2xl bg-[#FFFFFF] p-4">
+    <div className="m-4 flex flex-row justify-around rounded-2xl bg-white p-4">
       <div className="content">
-        <div className=" m-6 justify-center p-10 text-6xl text-[#8B44F6]">
+        <div className=" m-6 justify-center p-10 text-6xl text-brand">
           Enhanced Management System
         </div>
         <div className=" m-6 justify-center p-10 align-middle text-2xl">
@@ -31,5 +31,5 @@ export default function Hero() {
 
       <img src={hero} alt="hero" className="w-1/2 self-center rounded-xl" />
     </div>
-  );
+  )
 }
