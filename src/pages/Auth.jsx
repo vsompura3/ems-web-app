@@ -1,9 +1,29 @@
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router'
-import { getUserData, getUserMarks } from '../api/ems-endpoints'
+import {
+  getAnnouncements,
+  getHostelData,
+  getMakeupClasses,
+  getTimeTable,
+  getTodayClasses,
+  getUserAttendance,
+  getUserAuthorities,
+  getUserData,
+  getUserMarks,
+} from '../api/ems-endpoints'
 import LoginPanel from '../components/shared/LoginPanel'
 import { EMSContext } from '../context/EMSContext'
-import { GET_USER_DATA, GET_USER_MARKS } from '../context/action.types'
+import {
+  GET_ANNOUNCEMENTS,
+  GET_AUTHORITIES,
+  GET_HOSTEL_DETAILS,
+  GET_MAKEUP_CLASSES,
+  GET_TIME_TABLE,
+  GET_TODAY_TIME_TABLE,
+  GET_USER_ATTENDANCE,
+  GET_USER_DATA,
+  GET_USER_MARKS,
+} from '../context/action.types'
 
 const Auth = () => {
   const { dispatch } = useContext(EMSContext)
@@ -20,8 +40,22 @@ const Auth = () => {
       setError(false)
       const data1 = await getUserData(registrationNumber, password)
       const data2 = await getUserMarks(registrationNumber, password)
+      const data3 = await getHostelData(registrationNumber, password)
+      const data4 = await getAnnouncements(registrationNumber, password)
+      const data5 = await getTimeTable(registrationNumber, password)
+      const data6 = await getUserAttendance(registrationNumber, password)
+      const data7 = await getUserAuthorities(registrationNumber, password)
+      const data8 = await getMakeupClasses(registrationNumber, password)
+      const data9 = await getTodayClasses(registrationNumber, password)
       dispatch({ type: GET_USER_DATA, payload: data1 })
       dispatch({ type: GET_USER_MARKS, payload: data2 })
+      dispatch({ type: GET_HOSTEL_DETAILS, payload: data3 })
+      dispatch({ type: GET_ANNOUNCEMENTS, payload: data4 })
+      dispatch({ type: GET_TIME_TABLE, payload: data5 })
+      dispatch({ type: GET_USER_ATTENDANCE, payload: data6 })
+      dispatch({ type: GET_AUTHORITIES, payload: data7 })
+      dispatch({ type: GET_MAKEUP_CLASSES, payload: data8 })
+      dispatch({ type: GET_TODAY_TIME_TABLE, payload: data9 })
       setIsLoading(false)
       navigate('/dashboard')
     } else {
