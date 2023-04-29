@@ -3,7 +3,7 @@ import githubIcon from '../assets/github-logo.svg'
 
 function Developer({ name, avatar, role: tag, github_url, linkedin_url }) {
   return (
-    <li className="col-span-3 relative rounded-md border border-slate-400 bg-white/80 shadow-lg shadow-slate-200 after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-bl after:from-transparent after:to-black/70">
+    <li className="lg:col-span-3 relative rounded-md border border-slate-400 bg-white/80 shadow-lg shadow-slate-200 after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-bl after:from-transparent after:to-black/70">
       <img
         width={50}
         height={50}
@@ -70,7 +70,7 @@ const About = () => {
       <h2 className="font-semibold text-3xl md:text-4xl">
         The <span className="text-brand font-light">Dream Team</span>
       </h2>
-      <ul className="mt-16 grid grid-cols-12  gap-12 ">
+      <ul className="mt-16 grid sm:grid-cols-3 lg:grid-cols-12  gap-12 ">
         {developers.map(developer => (
           <Developer key={developer.id} {...developer} />
         ))}
