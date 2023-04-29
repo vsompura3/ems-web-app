@@ -47,7 +47,7 @@ const Auth = () => {
               handleSubmit={handleSubmit}
             />
           </div>
-          {error && <p className="text-red-700">Wrong Credentials....</p>}
+          {error && <p className="text-red-700">Wrong Credentials.</p>}
         </div>
       </div>
     </div>

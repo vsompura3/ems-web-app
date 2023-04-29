@@ -1,9 +1,9 @@
-import { useLocation } from 'react-router'
-import { NavLink } from 'react-router-dom'
-import appLogo from '../../assets/ems-logo.png'
+import { useLocation } from "react-router";
+import { NavLink } from "react-router-dom";
+import appLogo from "../../assets/ems-logo.png";
 
 const Header = () => {
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
   return (
     <header className="shadow">
       <div className="container mx-auto px-6">
@@ -20,7 +20,7 @@ const Header = () => {
                 className="font-medium text-slate-900 hover:text-slate-900/90 hover:underline"
                 href="/"
               >
-                Docs
+                Home
               </a>
             </li>
             <li>
@@ -31,7 +31,7 @@ const Header = () => {
                 About
               </a>
             </li>
-            {pathname === '/' ? (
+            {pathname === "/" ? (
               <li>
                 <NavLink
                   className="rounded-md bg-slate-900 px-4 py-2.5 font-medium text-white hover:bg-slate-900/80"
@@ -45,7 +45,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
