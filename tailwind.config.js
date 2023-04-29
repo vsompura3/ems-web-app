@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: '#8c44f7',
+        brand: {
+          DEFAULT: '#8c44f7',
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
