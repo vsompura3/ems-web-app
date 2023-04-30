@@ -79,18 +79,18 @@ export default function Timetable() {
                   </tr>
                 </thead>
                 <tbody>
-                  {days.map((day) => {
+                  {days.map((day, i) => {
                     return (
                       <tr key={day}>
                         <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
                           {day}
                         </td>
-                        {Object.keys(classes[0][1]).map((classTiming, i) => (
+                        {Object.keys(classes[0][1]).map((classTiming) => (
                           <td
                             className=" whitespace-wrap px-2 py-2 text-sm text-gray-500"
                             key={classTiming}
                           >
-                            {classes[0][1][classTiming] || "Free Period"}
+                            {classes[i][1][classTiming] || "Free Period"}
                           </td>
                         ))}
                       </tr>
