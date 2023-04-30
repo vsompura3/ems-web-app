@@ -87,10 +87,10 @@ export default function Timetable() {
                         </td>
                         {Object.keys(classes[0][1]).map((classTiming, i) => (
                           <td
-                            className=" px-2 py-2 text-sm text-gray-500"
+                            className=" whitespace-wrap px-2 py-2 text-sm text-gray-500"
                             key={classTiming}
                           >
-                            {classes[0][1][classTiming]}
+                            {classes[0][1][classTiming] || "Free Period"}
                           </td>
                         ))}
                       </tr>
