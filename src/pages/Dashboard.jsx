@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { EMSContext } from "../context/EMSContext";
-import Sidebar from "../components/layout/Sidebar";
-import Profile from "../components/sections/Profile";
-import Main from "../components/sections/Main";
+import { useContext } from 'react'
+import Sidebar from '../components/layout/Sidebar'
+import Main from '../components/sections/Main'
+import Profile from '../components/sections/Profile'
+import { EMSContext } from '../context/EMSContext'
 
 const Dashboard = () => {
-  const { state } = useContext(EMSContext);
-  const { userData: user } = state;
+  const { state } = useContext(EMSContext)
+  const { userData: user } = state
   return (
     <div className="container mx-auto flex h-full flex-1 flex-row justify-evenly">
       <div className=" p-2">
@@ -20,7 +20,7 @@ const Dashboard = () => {
         <Profile />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard
