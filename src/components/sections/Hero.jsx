@@ -3,7 +3,7 @@ import hero from '../../assets/hero.jpg'
 
 export default function Hero() {
   return (
-    <div className="m-4 px-8 flex flex-row justify-around rounded-2xl bg-white py-4 shadow">
+    <div className="m-4 px-8 flex flex-col md:flex-row justify-around rounded-2xl bg-white py-4 shadow">
       <div className="content flex flex-col justify-center space-y-8">
         <div className="justify-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand">
           Enhanced Management System
@@ -29,7 +29,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <img src={hero} alt="hero" className="w-1/2 self-center rounded-xl" />
+      <img
+        src={hero}
+        alt="hero"
+        className="md:w-1/2 self-stretch md:self-center rounded-xl"
+      />
     </div>
   )
 }
