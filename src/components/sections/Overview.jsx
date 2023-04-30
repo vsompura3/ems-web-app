@@ -12,12 +12,12 @@ export default function Overview() {
             <h2 className=" font-semibold text-slate-900">Attendance</h2>
           </div>
           <div className="card-body">
-            <h3 className="text-2xl text-slate-900">{user.agg_attendance}</h3>
+            <h3 className="text-2xl text-slate-900">{user.agg_attendance}%</h3>
           </div>
         </div>
         <div className="card m-4 w-36 rounded-xl bg-orange-100 p-4">
           <div className="card-header">
-            <h2 className=" font-semibold text-slate-900">Grade</h2>
+            <h2 className=" font-semibold text-slate-900">Grade (CGPA)</h2>
           </div>
           <div className="card-body">
             <h3 className="text-2xl text-slate-900">{user.cgpa}</h3>

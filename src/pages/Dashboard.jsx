@@ -8,15 +8,15 @@ const Dashboard = () => {
   const { state } = useContext(EMSContext);
   const { userData: user } = state;
   return (
-    <div className="container mx-auto flex h-full flex-1 flex-row justify-around">
-      <div className="p-2">
+    <div className="container mx-auto flex h-full flex-1 flex-row justify-evenly">
+      <div className=" p-2">
         <Sidebar />
       </div>
-      <div className="main flex flex-1 flex-row">
+      <div className="flex-1">
         <pre>{console.log(state)}</pre>
         <Main />
       </div>
-      <div className="profile">
+      <div className="">
         <Profile />
       </div>
     </div>

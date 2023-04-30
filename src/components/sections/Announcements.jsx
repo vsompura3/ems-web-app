@@ -7,48 +7,27 @@ export default function Announcements() {
     <div>
       <h1 className="mb-4 mt-4 flex text-2xl">Announcements</h1>
       <div className="flex flex-col">
-        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-            <div className="overflow-hidden">
-              <table className="min-w-full text-left text-sm font-light">
-                <thead className="border-b font-medium dark:border-neutral-500">
-                  <tr>
-                    <th scope="col" className="px-6 py-4">
-                      Date
-                    </th>
-                    <th scope="col" className="px-6 py-4">
-                      Category
-                    </th>{" "}
-                    <th scope="col" className="px-6 py-4">
-                      Details
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {announcements.annoucements
-                    .filter((item, index) => index < 5)
-                    .map((item) => {
-                      return (
-                        <tr
-                          key={item.announcement_id}
-                          className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-slate-200"
-                        >
-                          <td className="whitespace-nowrap px-6 py-4 font-medium">
-                            {item.date}
-                          </td>
-                          <td className="whitespace-nowrap px-6 py-4">
-                            {item.category_name}
-                          </td>
-                          <td className="whitespace-nowrap px-6 py-4">
-                            {item.subject}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <div className=" max-w-2xl">
+          <ol className="relative border-l border-gray-200 dark:border-gray-700">
+            {announcements.annoucements
+              .filter((item, index) => index < 5)
+              .map((item) => {
+                return (
+                  <li className="mb-6 ml-8" key={item.announcement_id}>
+                    <div className="absolute -left-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm  font-semibold leading-none text-gray-400 dark:text-gray-500">
+                      {item.date}
+                    </time>
+                    <h3 className="text-lg font-semibold text-gray-900 ">
+                      {item.category_name}
+                    </h3>
+                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                      {item.subject}
+                    </p>
+                  </li>
+                );
+              })}
+          </ol>
         </div>
       </div>
     </div>

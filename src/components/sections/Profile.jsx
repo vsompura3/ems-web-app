@@ -6,7 +6,7 @@ export default function Profile() {
   const { state } = useContext(EMSContext);
   const { userData: user } = state;
   return (
-    <div className="mx-auto flex flex-col justify-center align-middle">
+    <div className="mx-auto flex flex-1 flex-col justify-center align-middle">
       <div className="flex flex-row justify-between">
         <h1 className="mb-16 mt-4 flex text-2xl">Profile</h1>
         <div className="my-6 flex">
