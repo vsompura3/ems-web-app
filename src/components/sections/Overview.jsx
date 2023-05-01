@@ -7,7 +7,7 @@ export default function Overview() {
     <div>
       <h1 className="text-xl font-semibold text-slate-900 ">Overview</h1>
       <div className="flex flex-row">
-        <div className="card m-4 w-36 rounded-xl bg-red-100 p-4">
+        <div className="card m-4 w-40 rounded-xl bg-red-100 p-4">
           <div className="card-header">
             <h2 className=" font-semibold text-slate-900">Attendance</h2>
           </div>
@@ -15,7 +15,7 @@ export default function Overview() {
             <h3 className="text-2xl text-slate-900">{user.agg_attendance}%</h3>
           </div>
         </div>
-        <div className="card m-4 w-36 rounded-xl bg-orange-100 p-4">
+        <div className="card m-4 w-40 rounded-xl bg-orange-100 p-4">
           <div className="card-header">
             <h2 className=" font-semibold text-slate-900">Grade (CGPA)</h2>
           </div>

@@ -8,10 +8,6 @@ export default function Timetable() {
   const days = Object.keys(timeTable.time_table);
   const classes = Object.entries(timeTable.time_table);
 
-  Object.keys(classes[0][1]).map((classTiming, i) => {
-    console.log(classes[0][1][classTiming], i);
-  });
-
   return (
     <div>
       <h1 className="mb-4 mt-4 flex text-2xl">Timetable</h1>
@@ -24,55 +20,55 @@ export default function Timetable() {
                   <tr>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       Day
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       9 - 10 AM
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       10 - 11 AM
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       11 - 12 AM
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       12 - 1 PM
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       1 - 2 PM
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       2 - 3 PM
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       3 - 4 PM
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-left text-sm font-medium text-gray-900"
+                      className="px-6 py-6 text-left text-sm font-medium text-gray-900"
                     >
                       4 - 5 PM
                     </th>
@@ -81,8 +77,11 @@ export default function Timetable() {
                 <tbody>
                   {days.map((day, i) => {
                     return (
-                      <tr key={day}>
-                        <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
+                      <tr
+                        key={day}
+                        className="border-b bg-white transition duration-300 ease-in-out hover:bg-gray-100"
+                      >
+                        <td className="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
                           {day}
                         </td>
                         {Object.keys(classes[0][1]).map((classTiming) => (
