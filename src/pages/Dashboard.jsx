@@ -15,21 +15,21 @@ const Dashboard = () => {
   const { userData: user } = state;
   const { pathname } = useLocation();
   return (
-    <div className="container mx-auto flex h-full flex-1 flex-row justify-evenly">
+    <div className="container mx-auto flex h-full flex-1 flex-row justify-stretch">
       <div className=" p-2">
         <Sidebar />
       </div>
-      <div className="container mx-auto flex h-full flex-1 flex-row justify-evenly">
+      <div className="container mx-auto flex h-full flex-1 flex-row justify-between">
         {pathname === "/dashboard" && (
-          <>
-            <div className="flex-1">
+          <div className="flex">
+            <div className="">
               <pre>{console.log(state)}</pre>
               <Main />
             </div>
-            <div className="">
+            <div className="flex-wrap">
               <Profile />
             </div>
-          </>
+          </div>
         )}
         {pathname === "/dashboard/assignment" && <Assignment />}
         {pathname === "/dashboard/courses" && <Course />}

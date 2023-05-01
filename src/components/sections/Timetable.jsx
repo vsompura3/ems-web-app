@@ -8,6 +8,7 @@ export default function Timetable() {
   const days = Object.keys(timeTable.time_table);
   const classes = Object.entries(timeTable.time_table);
 
+
   return (
     <div>
       <h1 className="mb-4 mt-4 flex text-2xl">Timetable</h1>
