@@ -3,7 +3,6 @@ import { EMSContext } from "../../context/EMSContext";
 import { sayGreeting } from "../../utils/helpers";
 import Overview from "./Overview";
 import Announcements from "./Announcements";
-import Timetable from "./Timetable";
 
 export default function Main() {
   const { state } = useContext(EMSContext);
@@ -20,9 +19,6 @@ export default function Main() {
       </div>
       <div className="announcements">
         <Announcements />
-      </div>
-      <div className="timetable">
-        <Timetable />
       </div>
     </div>
   );

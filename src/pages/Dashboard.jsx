@@ -9,6 +9,7 @@ import Course from "./Course";
 import Attendance from "./Attendance";
 import Marks from "./Marks";
 import Placement from "./Placement";
+import Timetable from "../components/sections/Timetable";
 
 const Dashboard = () => {
   const { state } = useContext(EMSContext);
@@ -21,13 +22,18 @@ const Dashboard = () => {
       </div>
       <div className="container mx-auto flex h-full flex-1 flex-row justify-between">
         {pathname === "/dashboard" && (
-          <div className="flex">
-            <div className="">
-              <pre>{console.log(state)}</pre>
-              <Main />
+          <div className="flex flex-col">
+            <div className="flex flex-row justify-between gap-4">
+              <div className="">
+                <pre>{console.log(state)}</pre>
+                <Main />
+              </div>
+              <div className="flex-wrap">
+                <Profile />
+              </div>
             </div>
-            <div className="flex-wrap">
-              <Profile />
+            <div className="">
+              <Timetable />
             </div>
           </div>
         )}

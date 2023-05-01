@@ -6,29 +6,12 @@ export default function Profile() {
   const { state } = useContext(EMSContext);
   const { userData: user, todayTimeTable } = state;
 
-  console.log(todayTimeTable.today_time_table[0]);
   return (
     <>
       <div className="mx-auto flex flex-1 flex-col align-middle">
-        <div className="flex flex-row justify-between">
-          <h1 className="mb-16 mt-4 flex text-2xl">Profile</h1>
-          <div className="my-6 flex">
-            <AiOutlineEdit className=" border-2" size={26} />
-          </div>
+        <div className="mb-4 mt-8 text-xl font-semibold text-slate-900">
+          Today's Classes
         </div>
-        <div className="flex flex-col">
-          <img
-            src={`data:image/png;base64,${user.profile_image}`}
-            className="m-4 w-1/5 self-center rounded-xl"
-            alt=""
-          />
-          <div className="text-center text-xl">{user.name} </div>
-          <div className=" text-center"> {user.program} </div>
-          <div className=" text-center"> {user.roll_number} </div>
-        </div>
-      </div>
-      <div>
-        <div>Today's Classes</div>
         <div className="m-5 overflow-hidden rounded-lg border border-gray-200 shadow-md">
           <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
             <thead className="bg-gray-50">

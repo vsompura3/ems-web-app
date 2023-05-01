@@ -1,9 +1,13 @@
 import { useLocation } from "react-router";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { EMSContext } from "../../context/EMSContext";
 import appLogo from "../../assets/ems-logo.png";
 
 const Header = () => {
   const { pathname } = useLocation();
+  const { state } = useContext(EMSContext);
+  const { userData: user, todayTimeTable } = state;
   return (
     <header className="shadow">
       <div className="container mx-auto px-6">
@@ -40,6 +44,23 @@ const Header = () => {
                   Sign In
                 </NavLink>
               </li>
+            ) : null}
+            {pathname === "/dashboard" ? (
+              <ul className="flex items-center justify-center">
+                <li className=" flex flex-col text-sm font-semibold">
+                  {user.name}
+                  <span className="text-right text-xs font-medium">
+                    ({user.registration_number})
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src={`data:image/png;base64,${user.profile_image}`}
+                    className="m-4 w-10 self-center rounded-xl"
+                    alt="avatar"
+                  />
+                </li>
+              </ul>
             ) : null}
           </ul>
         </div>
