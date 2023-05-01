@@ -29,7 +29,6 @@ const Dashboard = () => {
             <div className="">
               <Profile />
             </div>
-            {console.log("works")}
           </>
         )}
         {pathname === "/dashboard/assignment" && <Assignment />}
