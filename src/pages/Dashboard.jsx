@@ -13,7 +13,7 @@ import Timetable from "../components/sections/Timetable";
 
 const Dashboard = () => {
   const { state } = useContext(EMSContext);
-  const { userData: user } = state;
+  const { userData } = state;
   const { pathname } = useLocation();
   return (
     <div className="container mx-auto flex h-full flex-1 flex-row justify-stretch">

@@ -6,15 +6,22 @@ import {
   MdTableView,
   MdSubject,
 } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function Sidebar() {
+  const location = useLocation();
+  const { pathname } = location;
+  const splitLocation = pathname.split("/");
   return (
     <div className=" flex px-10">
       <div>
         <h1 className="mb-16 mt-4 text-2xl">Dashboard</h1>
         <NavLink
-          className="abuttongn-middle my-8 flex flex-row justify-center"
+          className={
+            splitLocation[2] === undefined
+              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row px-4"
+          }
           to="/dashboard"
         >
           <span className="self-center px-2">
@@ -22,14 +29,25 @@ export default function Sidebar() {
           </span>
           Dashboard
         </NavLink>
-        <NavLink className="abuttongn-middle my-8 flex flex-row" to="/dashboard/courses">
+        <NavLink
+          className={
+            splitLocation[2] === "courses"
+              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row px-4"
+          }
+          to="/dashboard/courses"
+        >
           <span className="self-center px-2">
             <MdSubject size={26} />
           </span>
           Courses
         </NavLink>
         <NavLink
-          className="abuttongn-middle my-8 flex flex-row"
+          className={
+            splitLocation[2] === "attendance"
+              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row px-4"
+          }
           to="/dashboard/attendance"
         >
           <span className="self-center px-2">
@@ -38,7 +56,11 @@ export default function Sidebar() {
           Attendance
         </NavLink>
         <NavLink
-          className="abuttongn-middle my-8 flex flex-row"
+          className={
+            splitLocation[2] === "assignment"
+              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row px-4"
+          }
           to="/dashboard/assignment"
         >
           <span className="self-center px-2">
@@ -46,14 +68,25 @@ export default function Sidebar() {
           </span>
           <span> Assignment</span>
         </NavLink>
-        <NavLink className="abuttongn-middle my-8 flex flex-row" to="/dashboard/marks">
+        <NavLink
+          className={
+            splitLocation[2] === "marks"
+              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row px-4"
+          }
+          to="/dashboard/marks"
+        >
           <span className="self-center px-2">
             <MdTableView size={26} />
           </span>
           Marks
         </NavLink>
         <NavLink
-          className="abuttongn-middle my-8 flex flex-row"
+          className={
+            splitLocation[2] === "placement"
+              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row px-4"
+          }
           to="/dashboard/placement"
         >
           <span className="self-center px-2">

@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import { EMSContext } from "../../context/EMSContext";
-import { AiOutlineEdit } from "react-icons/ai";
 
 export default function Profile() {
   const { state } = useContext(EMSContext);
-  const { userData: user, todayTimeTable } = state;
+  const { todayTimeTable } = state;
 
   return (
     <>

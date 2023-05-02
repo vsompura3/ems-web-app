@@ -1,13 +1,22 @@
 import { useLocation } from "react-router";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { EMSContext } from "../../context/EMSContext";
 import appLogo from "../../assets/ems-logo.png";
 
 const Header = () => {
   const { pathname } = useLocation();
   const { state } = useContext(EMSContext);
-  const { userData: user, todayTimeTable } = state;
+  const { userData: user } = state;
+  const [status, setStatus] = useState("Sign In");
+
+  useEffect(() => {
+    if (user.registration_number > 0) {
+      setStatus("Sign Out");
+    } else {
+      setStatus("Sign In");
+    }
+  }, [user]);
   return (
     <header className="shadow">
       <div className="container mx-auto px-6">
@@ -35,17 +44,17 @@ const Header = () => {
                 About
               </a>
             </li>
-            {pathname === "/" ? (
-              <li>
-                <NavLink
-                  className="rounded-md bg-slate-900 px-4 py-2.5 font-medium text-white hover:bg-slate-900/80"
-                  to="/login"
-                >
-                  Sign In
-                </NavLink>
-              </li>
-            ) : null}
-            {pathname === "/dashboard" ? (
+
+            <li>
+              <NavLink
+                className="rounded-md bg-slate-900 px-4 py-2.5 font-medium text-white hover:bg-slate-900/80"
+                to="/login"
+              >
+                {status}
+              </NavLink>
+            </li>
+
+            {pathname === "/dashboard" || pathname == "/dashboard/" ? (
               <ul className="flex items-center justify-center">
                 <li className=" flex flex-col text-sm font-semibold">
                   {user.name}
