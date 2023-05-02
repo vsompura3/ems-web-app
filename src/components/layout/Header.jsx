@@ -5,7 +5,9 @@ import { EMSContext } from "../../context/EMSContext";
 import appLogo from "../../assets/ems-logo.png";
 
 const Header = () => {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const { pathname } = location;
+  const splitLocation = pathname.split("/");
   const { state } = useContext(EMSContext);
   const { userData: user } = state;
   const [status, setStatus] = useState("Sign In");
@@ -30,7 +32,11 @@ const Header = () => {
           <ul className="flex items-center gap-8">
             <li>
               <a
-                className="font-medium text-slate-900 hover:text-slate-900/90 hover:underline"
+                className={
+                  splitLocation[1] === ""
+                    ? "abuttongn-middle my-8 flex flex-row rounded-xl font-semibold text-brand "
+                    : "abuttongn-middle my-8 flex flex-row"
+                }
                 href="/"
               >
                 Home
@@ -38,7 +44,11 @@ const Header = () => {
             </li>
             <li>
               <a
-                className="font-medium text-slate-900 hover:text-slate-900/90 hover:underline"
+                className={
+                  splitLocation[1] === "about"
+                    ? "abuttongn-middle my-8 flex flex-row rounded-xl font-semibold text-brand"
+                    : "abuttongn-middle my-8 flex flex-row"
+                }
                 href="/about"
               >
                 About
