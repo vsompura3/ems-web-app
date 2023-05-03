@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { EMSContext } from "../../context/EMSContext";
+import { useContext } from 'react'
+import { EMSContext } from '../../context/EMSContext'
 export default function Announcements() {
-  const { state } = useContext(EMSContext);
-  const { announcements } = state;
+  const { state } = useContext(EMSContext)
+  const { announcements } = state
   return (
     <div>
       <h1 className="mb-4 mt-4 flex text-2xl">Announcements</h1>
@@ -11,7 +11,7 @@ export default function Announcements() {
           <ol className="relative border-l border-gray-200 dark:border-gray-700">
             {announcements.annoucements
               .filter((item, index) => index < 4)
-              .map((item) => {
+              .map(item => {
                 return (
                   <li className="mb-6 ml-8" key={item.announcement_id}>
                     <div className="absolute -left-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"></div>
@@ -25,11 +25,11 @@ export default function Announcements() {
                       {item.subject}
                     </p>
                   </li>
-                );
+                )
               })}
           </ol>
         </div>
       </div>
     </div>
-  );
+  )
 }
