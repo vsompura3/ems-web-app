@@ -10,7 +10,7 @@ export default function Announcements() {
         <div className=" max-w-2xl">
           <ol className="relative border-l border-gray-200 dark:border-gray-700">
             {announcements.annoucements
-              .filter((item, index) => index < 5)
+              .filter((item, index) => index < 4)
               .map((item) => {
                 return (
                   <li className="mb-6 ml-8" key={item.announcement_id}>

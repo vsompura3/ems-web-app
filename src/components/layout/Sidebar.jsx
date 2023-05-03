@@ -19,8 +19,8 @@ export default function Sidebar() {
         <NavLink
           className={
             splitLocation[2] === undefined
-              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row px-4"
+              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row items-center px-4"
           }
           to="/dashboard"
         >
@@ -32,8 +32,8 @@ export default function Sidebar() {
         <NavLink
           className={
             splitLocation[2] === "courses"
-              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row px-4"
+              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row items-center px-4"
           }
           to="/dashboard/courses"
         >
@@ -45,8 +45,8 @@ export default function Sidebar() {
         <NavLink
           className={
             splitLocation[2] === "attendance"
-              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row px-4"
+              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row items-center px-4"
           }
           to="/dashboard/attendance"
         >
@@ -58,8 +58,8 @@ export default function Sidebar() {
         <NavLink
           className={
             splitLocation[2] === "assignment"
-              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row px-4"
+              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row items-center px-4"
           }
           to="/dashboard/assignment"
         >
@@ -71,8 +71,8 @@ export default function Sidebar() {
         <NavLink
           className={
             splitLocation[2] === "marks"
-              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row px-4"
+              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row items-center px-4"
           }
           to="/dashboard/marks"
         >
@@ -84,8 +84,8 @@ export default function Sidebar() {
         <NavLink
           className={
             splitLocation[2] === "placement"
-              ? "abuttongn-middle my-8 flex flex-row rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row px-4"
+              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
+              : "abuttongn-middle my-8 flex flex-row items-center px-4"
           }
           to="/dashboard/placement"
         >
