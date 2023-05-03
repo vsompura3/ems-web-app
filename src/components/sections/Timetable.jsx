@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { EMSContext } from "../../context/EMSContext";
+import { useContext } from 'react'
+import { EMSContext } from '../../context/EMSContext'
 
 export default function Timetable() {
-  const { state } = useContext(EMSContext);
-  const { timeTable } = state;
+  const { state } = useContext(EMSContext)
+  const { timeTable } = state
 
-  const days = Object.keys(timeTable.time_table);
-  const classes = Object.entries(timeTable.time_table);
+  const days = Object.keys(timeTable.time_table)
+  const classes = Object.entries(timeTable.time_table)
 
   return (
     <div>
@@ -80,23 +80,23 @@ export default function Timetable() {
                       <tr key={day}>
                         <td className="border-b border-gray-200 bg-white px-5 py-5 text-sm">
                           <p className="whitespace-no-wrap text-center text-gray-900">
-                            {" "}
-                            {day}{" "}
+                            {' '}
+                            {day}{' '}
                           </p>
                         </td>
-                        {Object.keys(classes[0][1]).map((classTiming) => (
+                        {Object.keys(classes[0][1]).map(classTiming => (
                           <td
                             className="border-b border-gray-200 bg-white px-5 py-5 text-sm"
                             key={classTiming}
                           >
                             <p className="whitespace-no-wrap text-center text-gray-900">
-                              {" "}
-                              {classes[i][1][classTiming] || "Free Period"}{" "}
+                              {' '}
+                              {classes[i][1][classTiming] || 'Free Period'}{' '}
                             </p>
                           </td>
                         ))}
                       </tr>
-                    );
+                    )
                   })}
                 </tbody>
               </table>
@@ -105,5 +105,5 @@ export default function Timetable() {
         </div>
       </div>
     </div>
-  );
+  )
 }

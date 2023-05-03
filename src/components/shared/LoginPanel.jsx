@@ -49,7 +49,7 @@ const LoginPanel = ({
         </div>
       </div>
       <button
-        className="flex items-center justify-center gap-2 rounded-md bg-slate-900 py-3 font-semibold text-white"
+        className="flex items-center justify-center gap-2 rounded-md bg-slate-900 py-3 font-semibold text-white disabled:bg-black/75 disabled:cursor-not-allowed"
         type="submit"
         disabled={isLoading}
       >

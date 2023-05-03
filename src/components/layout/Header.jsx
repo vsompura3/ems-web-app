@@ -1,24 +1,24 @@
-import { useLocation } from "react-router";
-import { NavLink } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
-import { EMSContext } from "../../context/EMSContext";
-import appLogo from "../../assets/ems-logo.png";
+import { useContext, useEffect, useState } from 'react'
+import { useLocation } from 'react-router'
+import { NavLink } from 'react-router-dom'
+import appLogo from '../../assets/ems-logo.png'
+import { EMSContext } from '../../context/EMSContext'
 
 const Header = () => {
-  const location = useLocation();
-  const { pathname } = location;
-  const splitLocation = pathname.split("/");
-  const { state } = useContext(EMSContext);
-  const { userData: user } = state;
-  const [status, setStatus] = useState("Sign In");
+  const location = useLocation()
+  const { pathname } = location
+  const splitLocation = pathname.split('/')
+  const { state } = useContext(EMSContext)
+  const { userData: user, userCred } = state
+  const [status, setStatus] = useState('Sign In')
 
   useEffect(() => {
     if (user.registration_number > 0) {
-      setStatus("Sign Out");
+      setStatus('Sign Out')
     } else {
-      setStatus("Sign In");
+      setStatus('Sign In')
     }
-  }, [user]);
+  }, [user])
   return (
     <header className="shadow">
       <div className="container mx-auto px-6">
@@ -33,9 +33,9 @@ const Header = () => {
             <li>
               <a
                 className={
-                  splitLocation[1] === ""
-                    ? "abuttongn-middle my-8 flex flex-row rounded-xl font-semibold text-brand "
-                    : "abuttongn-middle my-8 flex flex-row"
+                  splitLocation[1] === ''
+                    ? 'abuttongn-middle my-8 flex flex-row rounded-xl font-semibold text-brand '
+                    : 'abuttongn-middle my-8 flex flex-row'
                 }
                 href="/"
               >
@@ -45,9 +45,9 @@ const Header = () => {
             <li>
               <a
                 className={
-                  splitLocation[1] === "about"
-                    ? "abuttongn-middle my-8 flex flex-row rounded-xl font-semibold text-brand"
-                    : "abuttongn-middle my-8 flex flex-row"
+                  splitLocation[1] === 'about'
+                    ? 'abuttongn-middle my-8 flex flex-row rounded-xl font-semibold text-brand'
+                    : 'abuttongn-middle my-8 flex flex-row'
                 }
                 href="/about"
               >
@@ -60,11 +60,11 @@ const Header = () => {
                 className="rounded-md bg-slate-900 px-4 py-2.5 font-medium text-white hover:bg-slate-900/80"
                 to="/login"
               >
-                {status}
+                {status === 'Sign In' ? 'Sign In' : 'Sign Out'}
               </NavLink>
             </li>
 
-            {pathname.startsWith("/dashboard") ? (
+            {pathname.startsWith('/dashboard') ? (
               <ul className="flex items-center justify-center">
                 <li className=" flex flex-col text-sm font-semibold">
                   {user.name ? user.name : "Please Sign In"}
@@ -85,7 +85,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

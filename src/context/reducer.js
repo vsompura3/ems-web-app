@@ -16,10 +16,13 @@ import {
   GET_USER_DATA,
   GET_USER_MARKS,
   GET_USER_MESSAGES,
+  SET_USER,
 } from './action.types'
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case SET_USER:
+      return { ...state, user: { ...state.user, ...action.payload } }
     case GET_USER_DATA:
       return { ...state, userData: { ...state.userData, ...action.payload } }
     case GET_USER_MESSAGES:

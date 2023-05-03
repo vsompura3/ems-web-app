@@ -1,17 +1,18 @@
-import { RxDashboard } from "react-icons/rx";
-import { BsCalendarCheck } from "react-icons/bs";
+import { BsCalendarCheck } from 'react-icons/bs'
 import {
   MdOutlineAssignment,
-  MdWorkOutline,
-  MdTableView,
   MdSubject,
-} from "react-icons/md";
-import { NavLink, useLocation } from "react-router-dom";
+  MdTableView,
+  MdWorkOutline,
+} from 'react-icons/md'
+import { RxDashboard } from 'react-icons/rx'
+import { NavLink, useLocation } from 'react-router-dom'
 
 export default function Sidebar() {
-  const location = useLocation();
-  const { pathname } = location;
-  const splitLocation = pathname.split("/");
+  const location = useLocation()
+  const { pathname } = location
+  const splitLocation = pathname.split('/')
+
   return (
     <div className=" flex px-10">
       <div>
@@ -19,8 +20,8 @@ export default function Sidebar() {
         <NavLink
           className={
             splitLocation[2] === undefined
-              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row items-center px-4"
+              ? 'abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white'
+              : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard"
         >
@@ -31,9 +32,9 @@ export default function Sidebar() {
         </NavLink>
         <NavLink
           className={
-            splitLocation[2] === "courses"
-              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row items-center px-4"
+            splitLocation[2] === 'courses'
+              ? 'abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white'
+              : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/courses"
         >
@@ -44,9 +45,9 @@ export default function Sidebar() {
         </NavLink>
         <NavLink
           className={
-            splitLocation[2] === "attendance"
-              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row items-center px-4"
+            splitLocation[2] === 'attendance'
+              ? 'abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white'
+              : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/attendance"
         >
@@ -57,9 +58,9 @@ export default function Sidebar() {
         </NavLink>
         <NavLink
           className={
-            splitLocation[2] === "assignment"
-              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row items-center px-4"
+            splitLocation[2] === 'assignment'
+              ? 'abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white'
+              : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/assignment"
         >
@@ -70,9 +71,9 @@ export default function Sidebar() {
         </NavLink>
         <NavLink
           className={
-            splitLocation[2] === "marks"
-              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row items-center px-4"
+            splitLocation[2] === 'marks'
+              ? 'abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white'
+              : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/marks"
         >
@@ -83,9 +84,9 @@ export default function Sidebar() {
         </NavLink>
         <NavLink
           className={
-            splitLocation[2] === "placement"
-              ? "abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white"
-              : "abuttongn-middle my-8 flex flex-row items-center px-4"
+            splitLocation[2] === 'placement'
+              ? 'abuttongn-middle my-8 flex flex-row items-center rounded-xl bg-blue-500 p-4 text-white'
+              : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/placement"
         >
@@ -96,5 +97,5 @@ export default function Sidebar() {
         </NavLink>
       </div>
     </div>
-  );
+  )
 }
