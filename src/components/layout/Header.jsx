@@ -67,9 +67,9 @@ const Header = () => {
             {pathname.startsWith("/dashboard") ? (
               <ul className="flex items-center justify-center">
                 <li className=" flex flex-col text-sm font-semibold">
-                  {user.name}
+                  {user.name ? user.name : "Please Sign In"}
                   <span className="text-right text-xs font-medium">
-                    ({user.registration_number})
+                    ({user.registration_number || null})
                   </span>
                 </li>
                 <li>
