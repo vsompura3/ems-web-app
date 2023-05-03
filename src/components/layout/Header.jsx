@@ -64,7 +64,7 @@ const Header = () => {
               </NavLink>
             </li>
 
-            {pathname === "/dashboard" || pathname == "/dashboard/" ? (
+            {pathname.startsWith("/dashboard") ? (
               <ul className="flex items-center justify-center">
                 <li className=" flex flex-col text-sm font-semibold">
                   {user.name}
