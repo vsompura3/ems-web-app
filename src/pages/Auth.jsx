@@ -1,5 +1,5 @@
-import { useContext, useState } from 'react'
-import { useNavigate } from 'react-router'
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router";
 import {
   getAnnouncements,
   getHostelData,
@@ -10,9 +10,9 @@ import {
   getUserAuthorities,
   getUserData,
   getUserMarks,
-} from '../api/ems-endpoints'
-import LoginPanel from '../components/shared/LoginPanel'
-import { EMSContext } from '../context/EMSContext'
+} from "../api/ems-endpoints";
+import LoginPanel from "../components/shared/LoginPanel";
+import { EMSContext } from "../context/EMSContext";
 import {
   GET_ANNOUNCEMENTS,
   GET_AUTHORITIES,
@@ -24,47 +24,47 @@ import {
   GET_USER_DATA,
   GET_USER_MARKS,
   SET_USER,
-} from '../context/action.types'
+} from "../context/action.types";
 
 const Auth = () => {
-  const { dispatch } = useContext(EMSContext)
-  const navigate = useNavigate()
-  const [isLoading, setIsLoading] = useState(false)
-  const [registrationNumber, setRegistrationNumber] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState(false)
+  const { dispatch } = useContext(EMSContext);
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const [registrationNumber, setRegistrationNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
 
-  const handleSubmit = async e => {
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (registrationNumber && password) {
-      setIsLoading(true)
-      setError(false)
-      dispatch({ type: SET_USER, payload: { registrationNumber, password } })
-      const data1 = await getUserData(registrationNumber, password)
-      const data2 = await getUserMarks(registrationNumber, password)
-      const data3 = await getHostelData(registrationNumber, password)
-      const data4 = await getAnnouncements(registrationNumber, password)
-      const data5 = await getTimeTable(registrationNumber, password)
-      const data6 = await getUserAttendance(registrationNumber, password)
-      const data7 = await getUserAuthorities(registrationNumber, password)
-      const data8 = await getMakeupClasses(registrationNumber, password)
-      const data9 = await getTodayClasses(registrationNumber, password)
-      dispatch({ type: GET_USER_DATA, payload: data1 })
-      dispatch({ type: GET_USER_MARKS, payload: data2 })
-      dispatch({ type: GET_HOSTEL_DETAILS, payload: data3 })
-      dispatch({ type: GET_ANNOUNCEMENTS, payload: data4 })
-      dispatch({ type: GET_TIME_TABLE, payload: data5 })
-      dispatch({ type: GET_USER_ATTENDANCE, payload: data6 })
-      dispatch({ type: GET_AUTHORITIES, payload: data7 })
-      dispatch({ type: GET_MAKEUP_CLASSES, payload: data8 })
-      dispatch({ type: GET_TODAY_TIME_TABLE, payload: data9 })
-      setIsLoading(false)
-      navigate('/dashboard')
+      setIsLoading(true);
+      setError(false);
+      dispatch({ type: SET_USER, payload: { registrationNumber, password } });
+      const data1 = await getUserData(registrationNumber, password);
+      // const data2 = await getUserMarks(registrationNumber, password)
+      // const data3 = await getHostelData(registrationNumber, password)
+      const data4 = await getAnnouncements(registrationNumber, password);
+      const data5 = await getTimeTable(registrationNumber, password);
+      // const data6 = await getUserAttendance(registrationNumber, password);
+      // const data7 = await getUserAuthorities(registrationNumber, password)
+      // const data8 = await getMakeupClasses(registrationNumber, password)
+      const data9 = await getTodayClasses(registrationNumber, password);
+      dispatch({ type: GET_USER_DATA, payload: data1 });
+      // dispatch({ type: GET_USER_MARKS, payload: data2 })
+      // dispatch({ type: GET_HOSTEL_DETAILS, payload: data3 })
+      dispatch({ type: GET_ANNOUNCEMENTS, payload: data4 });
+      dispatch({ type: GET_TIME_TABLE, payload: data5 });
+      // dispatch({ type: GET_USER_ATTENDANCE, payload: data6 });
+      // dispatch({ type: GET_AUTHORITIES, payload: data7 })
+      // dispatch({ type: GET_MAKEUP_CLASSES, payload: data8 })
+      dispatch({ type: GET_TODAY_TIME_TABLE, payload: data9 });
+      setIsLoading(false);
+      navigate("/dashboard");
     } else {
-      setError(true)
-      setIsLoading(false)
+      setError(true);
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <div className="py-16">
@@ -87,7 +87,7 @@ const Auth = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Auth
+export default Auth;

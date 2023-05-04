@@ -1,11 +1,11 @@
-import { NavLink } from 'react-router-dom'
-import hero from '../../assets/hero.jpg'
+import { NavLink } from "react-router-dom";
+import hero from "../../assets/hero.jpg";
 
 export default function Hero() {
   return (
-    <div className="m-4 px-8 flex flex-col md:flex-row justify-around rounded-2xl bg-white py-4 shadow">
+    <div className="m-4 flex flex-col justify-around rounded-2xl bg-white px-8 py-4 shadow md:flex-row">
       <div className="content flex flex-col justify-center space-y-8">
-        <div className="justify-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand">
+        <div className="justify-center text-3xl font-bold text-brand sm:text-5xl md:text-6xl lg:text-7xl">
           Enhanced Management System
         </div>
         <div className="justify-center align-middle text-lg md:text-xl">
@@ -23,7 +23,7 @@ export default function Hero() {
               className="mx-6 my-6 rounded-md border-2 border-slate-900 px-4 py-2.5 text-xl font-medium  hover:bg-slate-900 hover:text-white"
               to="/about"
             >
-              Learn More
+              Know More
             </NavLink>
           </div>
         </div>
@@ -32,8 +32,8 @@ export default function Hero() {
       <img
         src={hero}
         alt="hero"
-        className="md:w-1/2 self-stretch md:self-center rounded-xl"
+        className="self-stretch rounded-xl md:w-1/2 md:self-center"
       />
     </div>
-  )
+  );
 }

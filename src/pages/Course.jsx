@@ -33,7 +33,7 @@ export default function Course() {
                       scope="col"
                       className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-600"
                     >
-                      Credits
+                      Tutorials
                     </th>
                     <th
                       scope="col"
@@ -51,7 +51,7 @@ export default function Course() {
                       scope="col"
                       className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-600"
                     >
-                      Tutorials
+                      Credits
                     </th>
                   </tr>
                 </thead>
