@@ -7,14 +7,14 @@ export default function Announcements() {
     <div>
       <h1 className="mb-4 mt-4 flex text-2xl">Announcements</h1>
       <div className="flex flex-col">
-        <div className=" max-w-2xl">
-          <ol className="relative border-l border-gray-200 dark:border-gray-700">
+        <div className="max-w-2xl">
+          <ol className="relative border-l border-gray-200 dark:border-gray-700 max-h-[600px] overflow-y-scroll">
             {announcements.annoucements
-              .filter((item, index) => index < 4)
+              .filter((item, index) => index < 50)
               .map(item => {
                 return (
                   <li className="mb-6 ml-8" key={item.announcement_id}>
-                    <div className="absolute -left-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"></div>
+                    <div className="absolute -left-1.5 z-50 h-3 w-3 rotate-45 border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm  font-semibold leading-none text-gray-400 dark:text-gray-500">
                       {item.date}
                     </time>

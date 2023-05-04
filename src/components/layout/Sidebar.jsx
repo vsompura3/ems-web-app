@@ -8,7 +8,14 @@ import {
 import { RxDashboard } from 'react-icons/rx'
 import { NavLink, useLocation } from 'react-router-dom'
 
-export default function Sidebar() {
+export default function Sidebar({
+  loader,
+  fetchMarks,
+  fetchAttendance,
+  fetchCourses,
+  fetchPlacements,
+  fetchAssignments,
+}) {
   const location = useLocation()
   const { pathname } = location
   const splitLocation = pathname.split('/')
@@ -37,6 +44,7 @@ export default function Sidebar() {
               : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/courses"
+          onClick={fetchCourses}
         >
           <span className="self-center px-2">
             <MdSubject size={26} />
@@ -50,6 +58,7 @@ export default function Sidebar() {
               : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/attendance"
+          onClick={fetchAttendance}
         >
           <span className="self-center px-2">
             <BsCalendarCheck size={26} />
@@ -63,6 +72,7 @@ export default function Sidebar() {
               : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/assignment"
+          onClick={fetchAssignments}
         >
           <span className="self-center px-2">
             <MdOutlineAssignment size={26} />
@@ -76,6 +86,7 @@ export default function Sidebar() {
               : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/marks"
+          onClick={fetchMarks}
         >
           <span className="self-center px-2">
             <MdTableView size={26} />
@@ -89,6 +100,7 @@ export default function Sidebar() {
               : 'abuttongn-middle my-8 flex flex-row items-center px-4'
           }
           to="/dashboard/placement"
+          onClick={fetchPlacements}
         >
           <span className="self-center px-2">
             <MdWorkOutline size={26} />

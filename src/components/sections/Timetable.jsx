@@ -10,7 +10,7 @@ export default function Timetable() {
 
   return (
     <div>
-      <h1 className="mb-4 mt-4 flex text-2xl">Timetable</h1>
+      <h2 className="mb-4 mt-4 flex text-2xl">Timetable</h2>
       <div className="container mx-auto px-4 sm:px-8">
         <div className="py-8">
           <div className="-mx-4 overflow-x-auto px-4 py-4 sm:-mx-8 sm:px-8">
